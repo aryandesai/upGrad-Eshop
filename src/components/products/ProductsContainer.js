@@ -10,7 +10,7 @@ import {
   ToggleButtonGroup,
   Typography,
 } from "@mui/material";
-import ProductCard from "../productCard/ProductCard";
+import ProductCard from "../productTiles/ProductTile";
 import axios from "axios";
 import { AuthContext } from "../../common/AuthContext";
 import { useNavigate } from "react-router-dom";

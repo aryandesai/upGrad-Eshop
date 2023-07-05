@@ -161,33 +161,33 @@ function Order() {
   }, [authToken]);
 
   const renderProductDetails = () => (
-    <div className="productDetails">
-      <Typography gutterBottom variant="h5" component="p">
-        {state.name}
-      </Typography>
-      <Typography gutterBottom variant="body1" component="p">
-        Quantity: {state.quantity}
-      </Typography>
-      <Typography gutterBottom variant="body1" component="div" sx={{ mb: 2 }}>
-        Category: {state.category}
-      </Typography>
-      <Typography
-        gutterBottom
-        variant="body2"
-        component="p"
-        sx={{ fontStyle: "italic" }}
-      >
-        {state.description}
-      </Typography>
-      <Typography
-        gutterBottom
-        variant="h5"
-        component="div"
-        sx={{ color: "red", my: 2 }}
-      >
-        Total Price: ₹{state.price * state.quantity}
-      </Typography>
-    </div>
+            <div className="productDetails">
+              <Typography gutterBottom variant="h5" component="p">
+                {state.name}
+              </Typography>
+              <Typography gutterBottom variant="body1" component="p">
+                Quantity: {state.quantity}
+              </Typography>
+              <Typography gutterBottom variant="body1" component="div" sx={{ mb: 2 }}>
+                Category: {state.category}
+              </Typography>
+              <Typography
+                gutterBottom
+                variant="body2"
+                component="p"
+                sx={{ fontStyle: "italic" }}
+              >
+                {state.description}
+              </Typography>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{ color: "red", my: 2 }}
+              >
+                Total Price: ₹{state.price * state.quantity}
+              </Typography>
+            </div>
   );
 
   return authToken !== null ? (

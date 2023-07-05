@@ -6,7 +6,7 @@ import axios from "axios";
 import { AuthContext } from "../../common/AuthContext";
 import NavigationBar from "../navigationBar/NavigationBar";
 
-import "./Login.css";
+import "./login.css";
 
 function Login() {
   const navigate = useNavigate();

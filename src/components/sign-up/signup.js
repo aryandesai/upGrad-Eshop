@@ -5,7 +5,7 @@ import LockIcon from "@mui/icons-material/Lock";
 import axios from "axios";
 import NavigationBar from "../navigationBar/NavigationBar";
 
-import "./Signup.css";
+import "./signup.css";
 
 function Signup() {
   const navigate = useNavigate();
@@ -82,19 +82,19 @@ return (
           <TextField label="First Name" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
                         sx={{ mb: 3 }} fullWidth value={firstName} error={firstNameError}
                     />
-                    <TextField label="Last Name" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
+                    <TextField label="Last Name" onChange={(e) => setLastName(e.target.value)} required variant="outlined" type="text"
                         sx={{ mb: 3 }} fullWidth value={lastName} error={lastNameError}
                     />
-                    <TextField label="Email Address" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
+                    <TextField label="Email Address" onChange={(e) => setEmail(e.target.value)} required variant="outlined" type="text"
                         sx={{ mb: 3 }} fullWidth value={email} error={emailError}
                     />
-                    <TextField label="Password" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
+                    <TextField label="Password" onChange={(e) => setPassword(e.target.value)} required variant="outlined" type="text"
                         sx={{ mb: 3 }} fullWidth value={password} error={passwordError}
                     />
-                    <TextField label="Confirm Password" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
+                    <TextField label="Confirm Password" onChange={(e) => setConfirmPassword(e.target.value)} required variant="outlined" type="text"
                         sx={{ mb: 3 }} fullWidth value={confirmPassword} error={password.length > 0 && confirmPassword !== password}
                     />
-                    <TextField label="Contact Number" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
+                    <TextField label="Contact Number" onChange={(e) => setContactNumber(e.target.value)} required variant="outlined" type="text"
                         sx={{ mb: 3 }} fullWidth value={contactNumber} error={contactNumberError}
                     />
                     

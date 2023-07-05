@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import NavigationBar from "../navigationBar/NavigationBar";
 
-import "./AddEditProduct.css";
+import "./EditProduct.css";
 
 function AddEditProduct() {
   const { authToken, isAdmin } = useContext(AuthContext);

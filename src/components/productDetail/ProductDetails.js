@@ -12,7 +12,7 @@ import {
 import axios from "axios";
 import NavigationBar from "../navigationBar/NavigationBar";
 
-import "./ProductDetail.css";
+import "./ProductDetails.css";
 
 function ProductDetail() {
   const { authToken, isAdmin } = useContext(AuthContext);

@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Login from "./login/Login";
-import Signup from "./signup/Signup";
+import Login from "./login/login";
+import Signup from "./sign-up/signup";
 import { ThemeProvider, createTheme } from "@mui/material";
 import ProductsContainer from "./products/ProductsContainer";
 import { AuthContextProvider } from "../common/AuthContext";
-import ProductDetail from "./productDetail/ProductDetail";
-import Order from "./order/Order";
-import AddEditProduct from "./addProduct/EditProduct";
+import ProductDetail from "./productDetail/ProductDetails";
+import Order from "./order-page/Order";
+import AddEditProduct from "./editProduct/EditProduct";
 
 const appTheme = createTheme({
   palette: {
