@@ -11,7 +11,9 @@
     display: flex;
     gap: 2;
   }
-  
+  .detailContainer .child-divs {
+    padding: 10px 20px;
+  }
   .nameContainer {
     display: flex;
     justify-content: space-between;

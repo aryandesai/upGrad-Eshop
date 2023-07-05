@@ -4,7 +4,10 @@
     margin: 20px auto;
     height: 100%;
   }
-  
+  .categorySectionStyle {
+    margin-bottom: 30px;
+    text-align: center;
+  }
   .sortByDropdown {
     min-width: 150px !important;
     max-width: 250px;
