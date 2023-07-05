@@ -5,14 +5,16 @@ import LockIcon from "@mui/icons-material/Lock";
 import axios from "axios";
 import NavigationBar from "../navigationBar/NavigationBar";
 
-import "./signup.css";
+import "./Signup.css";
 
 function Signup() {
   const navigate = useNavigate();
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-
-  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
 
   const [firstNameError, setFirstNameError] = useState(false);
   const [lastNameError, setLastNameError] = useState(false);
@@ -20,7 +22,7 @@ function Signup() {
   const [passwordError, setPasswordError] = useState(false);
   const [contactNumberError, setContactNumberError] = useState(false);
 
-            const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
                 event.preventDefault();
 
                 setFirstNameError(false);
@@ -30,54 +32,54 @@ function Signup() {
                 setContactNumberError(false);
 
                 if (firstName === "") {
-                    setFirstName(true);
+                setFirstName(true);
                 }
                 if (lastName === "") {
-                    setLastName(true);
+                setLastName(true);
                 }
                 if (email === "") {
-                    setEmailError(true);
+                setEmailError(true);
                 }
                 if (password === "") {
-                     setPasswordError(true);
+                setPasswordError(true);
                 }
                 if (contactNumber === "") {
-                    setContactNumberError(true);
+                setContactNumberError(true);
                 }
 
                 if (firstName && lastName && email && password && contactNumber) {
-                        axios
-                            .post("http://localhost:8080/api/auth/signup", {
-                            firstName: firstName,
-                            lastName: lastName,
-                            email: email,
-                            password: password,
-                            contactNumber: contactNumber,
-                            })
-                            .then(function (response) {
-                            alert(response.data.message);
-                            navigate("/login");
-                            })
-                            .catch(function (error) {
-                            alert(
-                                "Error: There was an issue in registering the user, please try again later."
-                            );
-                            });
+                axios
+                    .post("http://localhost:8080/api/auth/signup", {
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email,
+                    password: password,
+                    contactNumber: contactNumber,
+                    })
+                    .then(function (response) {
+                    alert(response.data.message);
+                    navigate("/login");
+                    })
+                    .catch(function (error) {
+                    alert(
+                        "Error: There was an issue in registering the user, please try again later."
+                    );
+                    });
                 }
             };
 
-            return (
-                <>
-                <NavigationBar />
-                <div className="signupContainer">
-                    <form autoComplete="off" onSubmit={handleSubmit}>
-                    <Avatar className="avatarStyle">
-                        <LockIcon />
-                    </Avatar>
-                    <Typography gutterBottom variant="h5" component="p">
-                        Sign up
-                    </Typography>
-                    <TextField label="First Name" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
+return (
+    <>
+      <NavigationBar />
+      <div className="signupContainer">
+        <form autoComplete="off" onSubmit={handleSubmit}>
+          <Avatar className="avatarStyle">
+            <LockIcon />
+          </Avatar>
+          <Typography gutterBottom variant="h5" component="p">
+            Sign up
+          </Typography>
+          <TextField label="First Name" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
                         sx={{ mb: 3 }} fullWidth value={firstName} error={firstNameError}
                     />
                     <TextField label="Last Name" onChange={(e) => setFirstName(e.target.value)} required variant="outlined" type="text"
@@ -101,16 +103,16 @@ function Signup() {
                     >
                         Sign Up
                     </Button>
-                    <div className="loginLink">
-                        <Link to="/login">Already have an account? Sign in</Link>
-                    </div>
-                    </form>
-                </div>
-                <div className="signupFooter">
-                    Copyright &copy; <Link href="https://www.upgrad.com/">upGrad</Link> 2023
-                </div>
-                </>
-            );
-            }
+          <div className="loginLink">
+            <Link to="/login">Already have an account? Sign in</Link>
+          </div>
+        </form>
+      </div>
+      <div className="signupFooter">
+        Copyright &copy; <Link href="https://www.upgrad.com/">upGrad</Link> 2023
+      </div>
+    </>
+  );
+}
 
-    export default Signup;
+export default Signup;
